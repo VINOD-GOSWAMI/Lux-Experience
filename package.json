@@ -1,0 +1,24 @@
+{
+  "name": "luxexperience",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:ci": "playwright test --reporter=html",
+    "test:report": "playwright show-report",
+    "test:headed": "playwright test --headed",
+    "test:login": "playwright test tests/login.spec.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.56.1",
+    "@types/node": "^24.10.1"
+  },
+  "dependencies": {
+    "dayjs": "^1.11.19",
+    "dotenv": "^17.2.3"
+  }
+}
