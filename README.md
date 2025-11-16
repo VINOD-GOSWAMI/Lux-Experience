@@ -14,28 +14,36 @@ This repository contains Playwright-based framework
 - git
 
 ## Setup
-1. Clone the repository
-    ```
+### 1. Clone the repository
     git clone https://github.com/VINOD-GOSWAMI/Lux-Experience.git
-    ```
-2. Navigate into the project directory
-    ```
+### 2. Navigate into the project directory
     cd Lux-Experience
-    ```
-3. Install project dependencies
-    ```bash  
+### 3. Install project dependencies  
     npm install
-    ```
-4. Install Playwright browsers
-    ```bash
+### 4. Install Playwright browsers
     npx playwright install
-    ```
-5. Configure environment variables: Create and update the required .env.local or .env.prod file.
+### 5. Configure Environment Variables
 
-6. Use the default command below, or refer to the "Running Tests" section for additional execution options:
-    ```bash
-    npx playwright test
-    ```
+Create one of the following environment files in the project root based on the environment you want to test:
+
+- **`.env.local`** — for local development/testing  
+- **`.env.prod`** — for production-like testing  
+
+Ensure each file contains all the required environment variables needed for your test setup.
+
+### 6. Running Tests with Environment Selection
+
+You can specify the environment to use when running Playwright tests by passing the `ENV` variable:
+
+#### Run tests in production mode
+```bash
+ENV=prod npx playwright test
+```
+#### Run tests in local mode
+```bash
+ENV=local npx playwright test
+```
+Refer to the “Running Tests” section for additional execution options such as browser selection, tags, and parallel execution.
 
 ## Environment Configuration
 - The Playwright config loads environment files based on `ENV` and uses `BASE_URL`:
