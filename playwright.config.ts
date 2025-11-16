@@ -6,6 +6,8 @@ import dotenv from "dotenv";
 const env = process.env.ENV || 'local';
 dotenv.config({ path: `.env.${env}` });
 
+console.log('env loaded '+env);
+
 // Set webServer.url and use.baseURL with the location of the WebServer respecting the correct set port
 const baseURL = process.env.BASE_URL;
 
@@ -20,7 +22,7 @@ export default defineConfig({
   use: {
     baseURL,
     trace: 'retain-on-failure',
-    headless: false,
+    headless: true,
     screenshot:'only-on-failure',
     video:'retain-on-failure'
   },

@@ -35,7 +35,7 @@ pipeline {
         stage('Archive Reports') {
             steps {
                 archiveArtifacts artifacts: 'playwright-report/**', fingerprint: true
-                archiveArtifacts artifacts: 'test-results/**/*.mp4', fingerprint: true
+                archiveArtifacts artifacts: 'test-results/**/*.webm', fingerprint: true
                 archiveArtifacts artifacts: 'test-results/**/*.png', fingerprint: true
                 archiveArtifacts artifacts: 'test-results/**/*.zip', fingerprint: true
             }
