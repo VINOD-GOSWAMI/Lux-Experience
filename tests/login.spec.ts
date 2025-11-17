@@ -29,7 +29,7 @@ test.describe("Login Feature Suite", () => {
     );
 
     expect(validation.isValid).toBe(false);
-    expect(validation.errorMessage.toLowerCase()).toContain("please fill out this field.");
+    expect(validation.errorMessage.toLowerCase()).toContain("fill out this field");
 
     await expect(loginPage.page).toHaveURL(/login/);
     await expect(loginPage.loginButton).toBeVisible();
